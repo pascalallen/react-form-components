@@ -1,0 +1,24 @@
+{
+  "name": "react-form-components",
+  "version": "1.0.0",
+  "description": "Simple HTML form elements made for React.",
+  "main": "index.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pascalallen/ReactFormComponents.git"
+  },
+  "keywords": [
+    "Forms",
+    "Inputs",
+    "Fields"
+  ],
+  "author": "Pascal Allen <pascal.allen88@gmail.com> (https://github.com/pascalallen)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pascalallen/ReactFormComponents/issues"
+  },
+  "homepage": "https://github.com/pascalallen/ReactFormComponents#readme"
+}
