@@ -2,9 +2,10 @@
   "name": "react-form-components",
   "version": "1.0.0",
   "description": "Simple HTML form elements made for React.",
-  "main": "index.tsx",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "lint": "eslint './src/**/*.{ts,tsx}'",
+    "lint:fix": "eslint './src/**/*.{ts,tsx}' --fix"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,25 @@
   "bugs": {
     "url": "https://github.com/pascalallen/ReactFormComponents/issues"
   },
-  "homepage": "https://github.com/pascalallen/ReactFormComponents#readme"
+  "homepage": "https://github.com/pascalallen/ReactFormComponents#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "classnames": "^2.3.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1",
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.3.1",
+    "@types/enzyme": "^3.10.10",
+    "@types/react": "^17.0.34",
+    "@typescript-eslint/eslint-plugin": "^5.3.0",
+    "@typescript-eslint/parser": "^5.3.0",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.5",
+    "enzyme": "^3.11.0",
+    "enzyme-to-json": "^3.6.2",
+    "eslint-plugin-react": "^7.26.1",
+    "ts-jest": "^27.0.7"
+  }
 }
