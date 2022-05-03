@@ -17,7 +17,7 @@ module.exports = {
 
   testRegex: '(/tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
 
-  setupFilesAfterEnv: ['<rootDir>/setupTests.js'],
+  setupFilesAfterEnv: [],
 
   preset: 'ts-jest/presets/js-with-ts',
 
