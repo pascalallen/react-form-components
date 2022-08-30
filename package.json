@@ -12,9 +12,11 @@
     "url": "git+https://github.com/pascalallen/ReactFormComponents.git"
   },
   "keywords": [
+    "Fields",
     "Forms",
     "Inputs",
-    "Fields"
+    "React",
+    "Bootstrap"
   ],
   "author": "Pascal Allen <pascal.allen88@gmail.com> (https://github.com/pascalallen)",
   "license": "ISC",

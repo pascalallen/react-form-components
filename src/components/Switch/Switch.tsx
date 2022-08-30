@@ -2,7 +2,7 @@ import '../../app.scss';
 import React, {ChangeEvent, FocusEvent, ReactElement} from 'react';
 import classNames from 'classnames';
 
-export type RadioProps = {
+export type SwitchProps = {
   id?: string;
   name?: string;
   className?: string;
@@ -16,14 +16,15 @@ export type RadioProps = {
   onBlur?: (event: FocusEvent<HTMLInputElement>) => void;
 };
 
-const Radio = (props: RadioProps): ReactElement => {
+const Switch = (props: SwitchProps): ReactElement => {
   const {id, name, className, value, tabIndex, isValid = true, checked, required, disabled, onChange, onBlur} = props;
 
   return (
     <input
       id={id}
       className={classNames('form-check-input', className, !isValid ? 'is-invalid' : '')}
-      type="radio"
+      type="checkbox"
+      role="switch"
       name={name}
       value={value}
       checked={checked}
@@ -36,4 +37,4 @@ const Radio = (props: RadioProps): ReactElement => {
   );
 };
 
-export default Radio;
+export default Switch;

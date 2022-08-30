@@ -1,55 +1,53 @@
 import '../../app.scss';
-import React, {ChangeEvent, FocusEvent, ReactElement, InputHTMLAttributes} from 'react';
+import React, {ChangeEvent, FocusEvent, ReactElement} from 'react';
 import classNames from 'classnames';
 
-export type InputProps = InputHTMLAttributes<HTMLInputElement> & {
+export type TextareaProps = {
   id?: string;
   name?: string;
-  type: 'text' | 'password' | 'email' | 'color' | 'date' | 'number' | 'search' | 'tel' | 'url';
   className?: string;
   value?: string | string[] | number;
   placeholder?: string;
+  rows?: number;
   tabIndex?: number;
   isValid?: boolean;
   required?: boolean;
   disabled?: boolean;
-  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
-  onBlur?: (event: FocusEvent<HTMLInputElement>) => void;
+  onChange?: (event: ChangeEvent<HTMLTextAreaElement>) => void;
+  onBlur?: (event: FocusEvent<HTMLTextAreaElement>) => void;
 };
 
-const Input = (props: InputProps): ReactElement => {
+const Textarea = (props: TextareaProps): ReactElement => {
   const {
     id,
     name,
-    type,
     className,
     value,
     placeholder,
+    rows,
     tabIndex,
     isValid = true,
     required,
     disabled,
     onChange,
-    onBlur,
-    ...remaining
+    onBlur
   } = props;
 
   return (
-    <input
+    <textarea
       id={id}
       className={classNames('form-control', className, !isValid ? 'is-invalid' : '')}
-      type={type}
       name={name}
       value={value}
       placeholder={placeholder}
       required={required}
       tabIndex={tabIndex}
+      rows={rows}
       disabled={disabled}
       onChange={onChange}
       onBlur={onBlur}
-      {...remaining}
     />
   );
 };
 
-export default Input;
+export default Textarea;
