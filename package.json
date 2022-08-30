@@ -1,6 +1,6 @@
 {
   "name": "@pascalallen/react-form-components",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Simple HTML form elements made for React.",
   "scripts": {
     "test": "jest",
@@ -12,9 +12,11 @@
     "url": "git+https://github.com/pascalallen/ReactFormComponents.git"
   },
   "keywords": [
+    "Fields",
     "Forms",
     "Inputs",
-    "Fields"
+    "React",
+    "Bootstrap"
   ],
   "author": "Pascal Allen <pascal.allen88@gmail.com> (https://github.com/pascalallen)",
   "license": "ISC",

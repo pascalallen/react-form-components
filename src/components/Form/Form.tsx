@@ -1,39 +1,25 @@
 import '../../app.scss';
-import React, {ReactNode} from 'react';
-import classnames from 'classnames';
+import React, {FormEvent, ReactElement, ReactNode} from 'react';
 
-type Props = {
+export type FormProps = {
+  children?: ReactNode;
   id?: string;
-  name: string;
   className?: string;
-  children?: ReactNode | null;
   autoComplete?: boolean;
   noValidate?: boolean;
-  handleSubmit?: (event: React.FormEvent<HTMLFormElement>) => void;
+  onSubmit?: (event: FormEvent<HTMLFormElement>) => void;
 };
 
-const Form = (props: Props): React.ReactElement => {
-  const {
-    id,
-    name,
-    className = '',
-    children = [],
-    autoComplete = false,
-    noValidate = false,
-    handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
-      event.preventDefault();
-    }
-  } = props;
-
-  const htmlId = id ?? `${name.replace('_', '-')}-form`;
+const Form = (props: FormProps): ReactElement => {
+  const {children, id, className, autoComplete = false, noValidate = true, onSubmit} = props;
 
   return (
     <form
-      id={htmlId}
-      className={classnames(htmlId, className)}
+      id={id}
+      className={className}
       autoComplete={autoComplete ? 'on' : 'off'}
-      onSubmit={handleSubmit}
-      noValidate={noValidate}>
+      noValidate={noValidate}
+      onSubmit={onSubmit}>
       {children}
     </form>
   );

@@ -1,73 +1,47 @@
 import '../../app.scss';
-import React from 'react';
-import classnames from 'classnames';
+import React, {ChangeEvent, FocusEvent, ReactElement, useEffect, useRef} from 'react';
+import classNames from 'classnames';
 
-type Props = {
-  formName: string;
-  name: string;
-  className?: string;
-  checked?: boolean;
-  label?: string;
-  inline?: boolean;
-  isValid?: boolean;
-  required?: boolean;
-  tabIndex?: number;
-  disabled?: boolean;
-  error?: string;
+export type CheckboxProps = {
   id?: string;
-  handleChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  handleBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  name?: string;
+  className?: string;
+  value?: string | string[] | number;
+  tabIndex?: number;
+  isValid?: boolean;
+  checked?: boolean | 'indeterminate';
+  required?: boolean;
+  disabled?: boolean;
+  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: (event: FocusEvent<HTMLInputElement>) => void;
 };
 
-const Checkbox = (props: Props): React.ReactElement => {
-  const {
-    formName,
-    name,
-    className = '',
-    checked = false,
-    label = '',
-    inline = true,
-    isValid = true,
-    required = false,
-    tabIndex = 0,
-    disabled = false,
-    error = '',
-    id = `${formName}-${name.replace('_', '-')}`,
-    handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
-      event.preventDefault();
-    },
-    handleBlur = (event: React.FocusEvent<HTMLInputElement>): void => {
-      event.preventDefault();
+const Checkbox = (props: CheckboxProps): ReactElement => {
+  const {id, name, className, value, tabIndex, isValid = true, checked, required, disabled, onChange, onBlur} = props;
+
+  const checkboxElement = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (checkboxElement.current !== null) {
+      checkboxElement.current.indeterminate = checked === 'indeterminate';
     }
-  } = props;
+  }, [checked]);
 
   return (
-    <div className={classnames('form-group', className)}>
-      <div className={classnames('form-check', inline ? 'form-check-inline' : '')}>
-        <input
-          id={id}
-          type="checkbox"
-          name={name}
-          checked={checked}
-          className={classnames('form-check-input', !isValid ? 'is-invalid' : '', `${id}-checkbox`)}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          required={required}
-          tabIndex={tabIndex}
-          disabled={disabled}
-        />
-        {label ? (
-          <label htmlFor={id} className={classnames('form-check-label', `${id}-label`)}>
-            {label}
-          </label>
-        ) : null}
-        {error ? (
-          <div id={`${id}-error`} className={classnames('invalid-feedback', `${id}-error`)}>
-            {error}
-          </div>
-        ) : null}
-      </div>
-    </div>
+    <input
+      id={id}
+      className={classNames('form-check-input', className, !isValid ? 'is-invalid' : '')}
+      ref={checkboxElement}
+      type="checkbox"
+      name={name}
+      value={value}
+      checked={checked === 'indeterminate' || checked}
+      required={required}
+      tabIndex={tabIndex}
+      disabled={disabled}
+      onChange={onChange}
+      onBlur={onBlur}
+    />
   );
 };
 
