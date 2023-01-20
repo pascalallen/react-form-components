@@ -1,13 +1,41 @@
-# ReactFormComponents
+# React Form Components
 
-Simple HTML form elements made for React.
+Simple HTML form elements for React.
 
-## Prerequisites
+## Installation
 
-- [Node](https://nodejs.org/en/download/)
+Use the package manager [npm](https://nodejs.org/en/download/) to install @pascalallen/react-form-components.
 
-## Setup Instructions
+```bash
+npm i @pascalallen/react-form-components
+```
 
-### Install Package
+## Usage
 
-$ `cd <projects-parent-directory> && npm i @pascalallen/react-form-components`
+```typescript jsx
+import { ChangeEvent, useState } from "react";
+import Form from "./Form";
+import InputControl from "./InputControl";
+
+const [emailAddress, setEmailAddress] = useState("");
+
+const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
+  setEmailAddress(event.target.value);
+};
+
+<Form>
+  <InputControl
+    inputId="email"
+    className="email"
+    name="email"
+    type="email"
+    label="Email address"
+    tabIndex={1}
+    value={emailAddress}
+    isValid={emailAddress.length > 0}
+    required
+    error={emailAddress.length < 1 && "Email address is required"}
+    onChange={handleChange}
+  />
+</Form>;
+```
