@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pascalallen/ReactFormComponents.git"
+    "url": "git+https://github.com/pascalallen/react-form-components.git"
   },
   "keywords": [
     "Fields",
@@ -21,9 +21,9 @@
   "author": "Pascal Allen <pascal.allen88@gmail.com> (https://github.com/pascalallen)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pascalallen/ReactFormComponents/issues"
+    "url": "https://github.com/pascalallen/react-form-components/issues"
   },
-  "homepage": "https://github.com/pascalallen/ReactFormComponents#readme",
+  "homepage": "https://github.com/pascalallen/react-form-components#readme",
   "dependencies": {
     "bootstrap": "^5.1.3",
     "classnames": "^2.3.1",
