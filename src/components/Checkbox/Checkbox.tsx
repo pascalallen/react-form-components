@@ -1,5 +1,4 @@
-import '../../app.scss';
-import React, {ChangeEvent, FocusEvent, ReactElement, useEffect, useRef} from 'react';
+import React, { ChangeEvent, FocusEvent, ReactElement, useEffect, useRef } from 'react';
 import classNames from 'classnames';
 
 export type CheckboxProps = {
@@ -17,7 +16,7 @@ export type CheckboxProps = {
 };
 
 const Checkbox = (props: CheckboxProps): ReactElement => {
-  const {id, name, className, value, tabIndex, isValid = true, checked, required, disabled, onChange, onBlur} = props;
+  const { id, name, className, value, tabIndex, isValid = true, checked, required, disabled, onChange, onBlur } = props;
 
   const checkboxElement = useRef<HTMLInputElement>(null);
 

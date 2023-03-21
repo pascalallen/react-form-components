@@ -4,18 +4,18 @@ Simple HTML form elements for React.
 
 ## Installation
 
-Use the package manager [npm](https://nodejs.org/en/download/) to install @pascalallen/react-form-components.
+Use the package manager [yarn](https://classic.yarnpkg.com/lang/en/docs/install) to install @pascalallen/react-form-components.
 
 ```bash
-npm i @pascalallen/react-form-components
+yarn add @pascalallen/react-form-components
 ```
 
 ## Usage
 
 ```typescript jsx
-import { ChangeEvent, useState } from "react";
-import Form from "./Form";
-import InputControl from "./InputControl";
+import { ChangeEvent, useState } from 'react';
+import '@pascalallen/react-form-components/dist/app.scss';
+import { Form, InputControl } from '@pascalallen/react-form-components';
 
 const [emailAddress, setEmailAddress] = useState("");
 

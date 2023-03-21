@@ -1,7 +1,6 @@
-import '../../app.scss';
-import React, {ChangeEvent, FocusEvent, ReactElement, ReactNode} from 'react';
+import React, { ChangeEvent, FocusEvent, ReactElement, ReactNode } from 'react';
 import classNames from 'classnames';
-import {StyleButtonVariants} from '@/constants/StyleButtonVariants';
+import { StyleButtonVariants } from '@constants/StyleButtonVariants';
 
 export type CheckboxButtonProps = {
   children?: ReactNode;

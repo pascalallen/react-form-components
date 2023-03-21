@@ -1,5 +1,4 @@
-import '../../app.scss';
-import React, {ReactElement, ReactNode} from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 import classNames from 'classnames';
 
 export type FormGroupProps = {
@@ -11,7 +10,7 @@ export type FormGroupProps = {
 };
 
 const FormGroup = (props: FormGroupProps): ReactElement => {
-  const {children, id, className, style = 'default', inline} = props;
+  const { children, id, className, style = 'default', inline } = props;
 
   const classes: string[] = ['form-group'];
 

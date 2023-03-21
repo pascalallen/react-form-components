@@ -1,5 +1,4 @@
-import '../../app.scss';
-import React, {ChangeEvent, FocusEvent, ReactElement} from 'react';
+import React, { ChangeEvent, FocusEvent, ReactElement } from 'react';
 import classNames from 'classnames';
 
 export type SwitchProps = {
@@ -17,7 +16,7 @@ export type SwitchProps = {
 };
 
 const Switch = (props: SwitchProps): ReactElement => {
-  const {id, name, className, value, tabIndex, isValid = true, checked, required, disabled, onChange, onBlur} = props;
+  const { id, name, className, value, tabIndex, isValid = true, checked, required, disabled, onChange, onBlur } = props;
 
   return (
     <input

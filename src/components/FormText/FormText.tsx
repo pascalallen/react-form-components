@@ -1,5 +1,4 @@
-import '../../app.scss';
-import React, {ReactElement, ReactNode} from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 import classNames from 'classnames';
 
 export type FormTextProps = {
@@ -10,9 +9,13 @@ export type FormTextProps = {
 };
 
 const FormText = (props: FormTextProps): ReactElement => {
-  const {children, id, className, block = true} = props;
+  const { children, id, className, block = true } = props;
 
-  return React.createElement(block ? 'div' : 'span', {id: id, className: classNames('form-text', className)}, children);
+  return React.createElement(
+    block ? 'div' : 'span',
+    { id: id, className: classNames('form-text', className) },
+    children
+  );
 };
 
 export default FormText;

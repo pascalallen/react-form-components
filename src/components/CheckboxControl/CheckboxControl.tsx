@@ -1,10 +1,9 @@
-import '../../app.scss';
-import React, {ReactElement, ChangeEvent, FocusEvent} from 'react';
-import Checkbox from '@/components/Checkbox/Checkbox';
-import FormGroup from '@/components/FormGroup/FormGroup';
-import Feedback from '@/components/Feedback/Feedback';
-import FormLabel from '@/components/FormLabel/FormLabel';
-import FormText from '@/components/FormText/FormText';
+import React, { ReactElement, ChangeEvent, FocusEvent } from 'react';
+import Checkbox from '@components/Checkbox/Checkbox';
+import Feedback from '@components/Feedback/Feedback';
+import FormGroup from '@components/FormGroup/FormGroup';
+import FormLabel from '@components/FormLabel/FormLabel';
+import FormText from '@components/FormText/FormText';
 
 export type CheckboxControlProps = {
   id?: string;

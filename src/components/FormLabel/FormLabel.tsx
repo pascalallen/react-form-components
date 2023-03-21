@@ -1,5 +1,4 @@
-import '../../app.scss';
-import React, {ReactElement, ReactNode} from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 import classNames from 'classnames';
 
 export type FormLabelProps = {
@@ -12,7 +11,7 @@ export type FormLabelProps = {
 };
 
 const FormLabel = (props: FormLabelProps): ReactElement => {
-  const {children, id, htmlFor, className, style = 'default', required} = props;
+  const { children, id, htmlFor, className, style = 'default', required } = props;
 
   const classes: string[] = ['form-label'];
 

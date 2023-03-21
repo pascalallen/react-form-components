@@ -1,5 +1,4 @@
-import '../../app.scss';
-import React, {ReactElement, ReactNode} from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 
 export type FieldSetProps = {
   children?: ReactNode;
@@ -10,7 +9,7 @@ export type FieldSetProps = {
 };
 
 const FieldSet = (props: FieldSetProps): ReactElement => {
-  const {children, id, className, legend, disabled} = props;
+  const { children, id, className, legend, disabled } = props;
 
   return (
     <fieldset id={id} className={className} disabled={disabled}>

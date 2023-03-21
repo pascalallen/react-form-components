@@ -1,5 +1,4 @@
-import '../../app.scss';
-import React, {ChangeEvent, FocusEvent, ReactElement, ReactNode} from 'react';
+import React, { ChangeEvent, FocusEvent, ReactElement, ReactNode } from 'react';
 import classNames from 'classnames';
 
 export type SelectProps = {
