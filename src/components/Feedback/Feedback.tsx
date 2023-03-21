@@ -1,5 +1,4 @@
-import '../../app.scss';
-import React, {ReactElement, ReactNode} from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 import classNames from 'classnames';
 
 export type FeedbackProps = {
@@ -10,7 +9,7 @@ export type FeedbackProps = {
 };
 
 const Feedback = (props: FeedbackProps): ReactElement => {
-  const {children, id, className, isValid = true} = props;
+  const { children, id, className, isValid = true } = props;
 
   return (
     <div id={id} className={classNames(isValid ? 'valid-feedback' : 'invalid-feedback', className)}>

@@ -1,10 +1,9 @@
-import '../../app.scss';
-import React, {ChangeEvent, FocusEvent, ReactElement, ReactNode} from 'react';
-import Textarea from '@/components/Textarea/Textarea';
-import Feedback from '@/components/Feedback/Feedback';
-import FormGroup from '@/components/FormGroup/FormGroup';
-import FormText from '@/components/FormText/FormText';
-import FormLabel from '@/components/FormLabel/FormLabel';
+import React, { ChangeEvent, FocusEvent, ReactElement, ReactNode } from 'react';
+import Feedback from '@components/Feedback/Feedback';
+import FormGroup from '@components/FormGroup/FormGroup';
+import FormLabel from '@components/FormLabel/FormLabel';
+import FormText from '@components/FormText/FormText';
+import Textarea from '@components/Textarea/Textarea';
 
 export type TextareaControlProps = {
   id?: string;

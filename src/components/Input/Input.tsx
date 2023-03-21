@@ -1,5 +1,4 @@
-import '../../app.scss';
-import React, {ChangeEvent, FocusEvent, ReactElement, InputHTMLAttributes} from 'react';
+import React, { ChangeEvent, FocusEvent, ReactElement, InputHTMLAttributes } from 'react';
 import classNames from 'classnames';
 
 export type InputProps = InputHTMLAttributes<HTMLInputElement> & {

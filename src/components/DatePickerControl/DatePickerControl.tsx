@@ -1,10 +1,9 @@
-import '../../app.scss';
-import React, {ChangeEvent, FocusEvent} from 'react';
-import Input from '@/components/Input/Input';
-import Feedback from '@/components/Feedback/Feedback';
-import FormGroup from '@/components/FormGroup/FormGroup';
-import FormText from '@/components/FormText/FormText';
-import FormLabel from '@/components/FormLabel/FormLabel';
+import React, { ChangeEvent, FocusEvent } from 'react';
+import Feedback from '@components/Feedback/Feedback';
+import FormGroup from '@components/FormGroup/FormGroup';
+import FormLabel from '@components/FormLabel/FormLabel';
+import FormText from '@components/FormText/FormText';
+import Input from '@components/Input/Input';
 
 export type DatePickerControlProps = {
   id?: string;

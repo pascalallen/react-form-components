@@ -1,10 +1,9 @@
-import '../../app.scss';
-import React, {ReactElement, ChangeEvent, FocusEvent} from 'react';
-import Feedback from '@/components/Feedback/Feedback';
-import FormGroup from '@/components/FormGroup/FormGroup';
-import FormText from '@/components/FormText/FormText';
-import Radio from '@/components/Radio/Radio';
-import FormLabel from '@/components/FormLabel/FormLabel';
+import React, { ReactElement, ChangeEvent, FocusEvent } from 'react';
+import Feedback from '@components/Feedback/Feedback';
+import FormGroup from '@components/FormGroup/FormGroup';
+import FormLabel from '@components/FormLabel/FormLabel';
+import FormText from '@components/FormText/FormText';
+import Radio from '@components/Radio/Radio';
 
 export type RadioControlProps = {
   id?: string;

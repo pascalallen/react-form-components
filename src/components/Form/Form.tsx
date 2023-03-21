@@ -1,5 +1,4 @@
-import '../../app.scss';
-import React, {FormEvent, ReactElement, ReactNode} from 'react';
+import React, { FormEvent, ReactElement, ReactNode } from 'react';
 
 export type FormProps = {
   children?: ReactNode;
@@ -11,7 +10,7 @@ export type FormProps = {
 };
 
 const Form = (props: FormProps): ReactElement => {
-  const {children, id, className, autoComplete = false, noValidate = true, onSubmit} = props;
+  const { children, id, className, autoComplete = false, noValidate = true, onSubmit } = props;
 
   return (
     <form

@@ -1,5 +1,4 @@
-import '../../app.scss';
-import React, {ChangeEvent, FocusEvent, ReactElement} from 'react';
+import React, { ChangeEvent, FocusEvent, ReactElement } from 'react';
 import classNames from 'classnames';
 
 export type RadioProps = {
@@ -17,7 +16,7 @@ export type RadioProps = {
 };
 
 const Radio = (props: RadioProps): ReactElement => {
-  const {id, name, className, value, tabIndex, isValid = true, checked, required, disabled, onChange, onBlur} = props;
+  const { id, name, className, value, tabIndex, isValid = true, checked, required, disabled, onChange, onBlur } = props;
 
   return (
     <input
