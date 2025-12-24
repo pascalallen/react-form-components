@@ -25,7 +25,6 @@ const Select = (props: SelectProps): ReactElement => {
     className,
     defaultValue,
     value,
-    placeholder,
     tabIndex,
     isValid = true,
     required,
@@ -41,7 +40,6 @@ const Select = (props: SelectProps): ReactElement => {
       name={name}
       defaultValue={defaultValue}
       value={value}
-      placeholder={placeholder}
       required={required}
       tabIndex={tabIndex}
       disabled={disabled}
